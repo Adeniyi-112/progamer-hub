@@ -4,20 +4,21 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="theme-color" content="#090b19">
-<title>ProGamers Hub — Your Gaming Home</title>
+<title>ProGamers Hub | Your Gaming World</title>
+<meta name="theme-color" content="#090d1d">
 
 <style>
 :root {
-  --bg:#090b19;
-  --panel:#12172b;
-  --panel2:#191f38;
-  --purple:#9565ff;
-  --blue:#398cff;
-  --text:#f5f5ff;
-  --muted:#a5acc7;
-  --border:#29304b;
+  --bg:#090d1d;
+  --panel:#111a32;
+  --panel2:#172344;
+  --text:#f5f7ff;
+  --muted:#a4b0ce;
+  --blue:#3985ff;
+  --purple:#8755ff;
+  --border:rgba(255,255,255,.09);
 }
+
 *{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth}
 body{
@@ -27,281 +28,258 @@ body{
 }
 button,a{font:inherit}
 button{cursor:pointer}
+a{color:inherit;text-decoration:none}
+
 header{
-  height:72px;
-  padding:0 5%;
-  display:flex;
-  align-items:center;
-  justify-content:space-between;
-  background:#0c1021;
-  border-bottom:1px solid var(--border);
   position:sticky;
   top:0;
   z-index:10;
+  background:rgba(9,13,29,.94);
+  backdrop-filter:blur(15px);
+  border-bottom:1px solid var(--border);
 }
-.logo{font-weight:900;font-size:20px;letter-spacing:.5px}
-.logo span{color:#a987ff}
-nav{display:flex;gap:25px}
-nav a{
-  color:var(--muted);
-  text-decoration:none;
-  font-size:13px;
-}
-nav a:hover{color:white}
-.btn{
-  border:0;
-  padding:12px 18px;
-  border-radius:9px;
-  color:white;
-  font-weight:bold;
-  background:linear-gradient(110deg,var(--purple),var(--blue));
-}
-.btn:hover{filter:brightness(1.15)}
-.secondary{
-  background:#202743;
-  border:1px solid #3b4567;
-}
-main{max-width:1450px;margin:auto}
-.welcome{
-  padding:45px 5% 35px;
-  background:
-   radial-gradient(ellipse at 80% 15%,#352365 0%,transparent 42%),
-   linear-gradient(120deg,#11172d,#0c1021);
-}
-.welcome-top{
+.nav{
+  max-width:1200px;
+  margin:auto;
+  padding:17px 5%;
   display:flex;
   justify-content:space-between;
   align-items:center;
-  gap:20px;
+  gap:15px;
 }
-.eyebrow{
-  color:#b99aff;
-  font-size:11px;
-  font-weight:bold;
-  letter-spacing:2px;
+.logo{
+  font-size:21px;
+  font-weight:900;
+}
+.logo span{color:#8c6bff}
+nav{display:flex;gap:22px;align-items:center}
+nav a{font-size:13px;color:var(--muted)}
+nav a:hover{color:white}
+.container{max-width:1200px;margin:auto;padding:0 5%}
+
+.hero{
+  padding:75px 0 60px;
+  background:
+  radial-gradient(ellipse at 75% 30%,rgba(106,68,255,.24),transparent 42%),
+  radial-gradient(ellipse at 10% 70%,rgba(33,113,255,.17),transparent 40%);
+}
+.hero-content{
+  display:grid;
+  grid-template-columns:1.2fr .8fr;
+  align-items:center;
+  gap:35px;
+}
+.tag{
+  display:inline-block;
+  background:#18274b;
+  color:#9ebaff;
+  padding:9px 14px;
+  border-radius:30px;
+  font-size:12px;
+  margin-bottom:20px;
 }
 h1{
-  font-size:clamp(34px,5vw,58px);
-  line-height:1.12;
-  margin:17px 0 12px;
+  font-size:clamp(38px,6vw,65px);
+  line-height:1.08;
+  margin-bottom:20px;
 }
-h1 span{color:#ad8aff}
-.welcome p{
+.gradient{
+  background:linear-gradient(90deg,#5d9cff,#a77aff);
+  -webkit-background-clip:text;
+  color:transparent;
+}
+.hero p{
   color:var(--muted);
   line-height:1.8;
   max-width:540px;
-  font-size:14px;
 }
-.welcome-actions{
-  display:flex;
-  gap:12px;
-  flex-wrap:wrap;
-  margin-top:24px;
+.actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:27px}
+.btn{
+  border:0;
+  padding:13px 20px;
+  border-radius:10px;
+  font-weight:bold;
+  color:white;
+  background:linear-gradient(100deg,var(--blue),var(--purple));
 }
-.welcome-art{
-  width:230px;
-  height:210px;
+.btn.secondary{
+  background:#182442;
+  border:1px solid var(--border);
+}
+.hero-art{
+  min-height:280px;
+  border:1px solid var(--border);
   border-radius:25px;
-  background:linear-gradient(145deg,#34245e,#142c58);
-  border:1px solid #65519a;
+  background:linear-gradient(145deg,#1a2d57,#15152e);
   display:flex;
   align-items:center;
   justify-content:center;
-  font-size:95px;
-  box-shadow:0 20px 70px #0007;
+  text-align:center;
+  padding:30px;
+  box-shadow:0 25px 70px #0005;
 }
-.content{padding:32px 5%}
-.section-title{
-  display:flex;
-  justify-content:space-between;
-  align-items:end;
-  gap:15px;
-  margin-bottom:19px;
-}
-.section-title h2{font-size:21px}
-.section-title p{
-  color:var(--muted);
-  font-size:12px;
-  margin-top:6px;
-}
-.text-link{color:#b99aff;font-size:12px;text-decoration:none}
-.quick-grid{
+.hero-art .controller{font-size:100px}
+.hero-art h3{margin-top:15px;font-size:23px}
+.hero-art p{font-size:13px;margin-top:8px}
+
+section{padding:55px 0}
+.section-title{margin-bottom:25px}
+.section-title h2{font-size:27px;margin-bottom:9px}
+.section-title p{color:var(--muted);font-size:14px}
+
+.grid{
   display:grid;
   grid-template-columns:repeat(4,1fr);
-  gap:14px;
-}
-.quick-card{
-  padding:18px;
-  background:var(--panel);
-  border:1px solid var(--border);
-  border-radius:13px;
-}
-.quick-card .emoji{font-size:26px}
-.quick-card h3{font-size:14px;margin:13px 0 7px}
-.quick-card p{font-size:12px;color:var(--muted);line-height:1.6}
-.game-grid{
-  display:grid;
-  grid-template-columns:repeat(4,1fr);
-  gap:16px;
-}
-.game{
-  min-height:190px;
-  border:1px solid var(--border);
-  border-radius:15px;
-  padding:20px;
-  background:linear-gradient(145deg,#1a2040,#11162a);
-  position:relative;
-  overflow:hidden;
-  transition:.2s;
-}
-.game:hover{
-  transform:translateY(-4px);
-  border-color:#8562e8;
-}
-.game .game-emoji{font-size:40px}
-.game h3{margin:17px 0 7px;font-size:17px}
-.game p{font-size:12px;color:var(--muted);line-height:1.6}
-.game button{margin-top:15px}
-.squad-layout{
-  display:grid;
-  grid-template-columns:1.4fr 1fr;
   gap:17px;
 }
-.squad-box,.community-box{
-  padding:23px;
+.card{
   background:var(--panel);
+  border:1px solid var(--border);
+  border-radius:17px;
+  padding:21px;
+  transition:.2s;
+}
+.card:hover{
+  transform:translateY(-4px);
+  border-color:#5268bd;
+}
+.game-icon{
+  height:115px;
+  border-radius:12px;
+  background:linear-gradient(135deg,#203e77,#39265e);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:48px;
+  margin-bottom:17px;
+}
+.card h3{margin-bottom:8px}
+.card p{font-size:13px;color:var(--muted);line-height:1.6}
+.small-btn{
+  margin-top:15px;
+  padding:9px 13px;
+  border:0;
+  border-radius:8px;
+  background:#263b70;
+  color:white;
+  font-size:12px;
+}
+
+.feature-grid{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:15px;
+}
+.feature{
+  background:var(--panel);
+  padding:22px;
+  border-radius:15px;
+  border:1px solid var(--border);
+}
+.feature .emoji{font-size:29px;margin-bottom:14px}
+.feature h3{font-size:16px;margin-bottom:9px}
+.feature p{font-size:13px;color:var(--muted);line-height:1.6}
+
+.welcome{
+  background:linear-gradient(110deg,#18356b,#39236d);
+  padding:35px;
+  border-radius:20px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:20px;
+}
+.welcome p{color:#d3dcff;line-height:1.7;margin-top:10px}
+.welcome .btn{background:white;color:#19254a}
+
+.profile-panel{
+  display:none;
+  margin-top:25px;
+  background:var(--panel);
+  padding:20px;
   border:1px solid var(--border);
   border-radius:15px;
 }
-.squad-box p,.community-box p{
-  color:var(--muted);
-  font-size:13px;
-  line-height:1.7;
-  margin:10px 0 17px;
-}
-.squad-tags{display:flex;gap:8px;flex-wrap:wrap}
-.tag{
-  padding:8px 11px;
-  border-radius:20px;
-  background:#242b4b;
-  color:#d9ceff;
-  font-size:11px;
-}
-.event{
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-  gap:12px;
-  padding:14px 0;
-  border-bottom:1px solid var(--border);
-}
-.event:last-child{border:0}
-.event strong{font-size:13px}
-.event small{display:block;color:var(--muted);margin-top:5px}
-.status{color:#a98bff;font-size:11px}
-.leaderboard{
-  width:100%;
-  border-collapse:collapse;
-}
-.leaderboard th,.leaderboard td{
-  padding:15px 10px;
-  text-align:left;
-  border-bottom:1px solid var(--border);
-  font-size:12px;
-}
-.leaderboard th{color:#b99aff}
-.leaderboard td{color:#e1e3f5}
-.sample{
-  font-size:10px;
-  color:#aeb5d0;
-  margin-top:12px;
-}
-.community-banner{
-  background:linear-gradient(110deg,#292052,#172d55);
-  border:1px solid #51477e;
-  border-radius:16px;
-  padding:27px;
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-  gap:20px;
-}
-.community-banner p{
-  color:#d0cbe7;
-  font-size:13px;
-  margin-top:9px;
-  line-height:1.7;
-}
+.profile-panel h3{margin-bottom:10px}
+.profile-panel p{color:var(--muted);font-size:14px;margin:7px 0}
+
 footer{
   border-top:1px solid var(--border);
-  padding:27px 5%;
+  padding:30px 5%;
+  text-align:center;
   color:var(--muted);
-  display:flex;
-  justify-content:space-between;
-  gap:15px;
-  flex-wrap:wrap;
-  font-size:12px;
+  font-size:13px;
 }
+
 .modal{
   display:none;
   position:fixed;
   inset:0;
-  background:#000b;
   z-index:30;
+  background:#000b;
   align-items:center;
   justify-content:center;
   padding:18px;
 }
 .modal-box{
   width:100%;
-  max-width:390px;
-  padding:25px;
-  background:#151b32;
-  border:1px solid #454d73;
-  border-radius:16px;
+  max-width:410px;
+  background:#121c37;
+  border:1px solid var(--border);
+  border-radius:18px;
+  padding:26px;
 }
-.modal-box h2{margin-bottom:9px}
-.modal-box p{color:var(--muted);font-size:12px;line-height:1.6}
-.modal-box label{
-  display:block;
-  margin-top:14px;
-  font-size:12px;
-}
+.modal-box h2{margin-bottom:8px}
+.modal-box>p{color:var(--muted);font-size:13px;margin-bottom:20px}
 .modal-box input{
+  display:block;
   width:100%;
-  padding:13px;
-  margin-top:7px;
-  background:#090e20;
-  border:1px solid #3a4362;
-  border-radius:8px;
+  margin:11px 0;
+  padding:14px;
+  border-radius:9px;
+  border:1px solid #344263;
+  background:#0b1328;
   color:white;
+  outline:none;
 }
-.modal-box button{width:100%;margin-top:12px;min-height:44px}
+.modal-box input:focus{border-color:var(--blue)}
+.modal-box .btn{width:100%;margin-top:9px}
 .close{
   float:right;
   background:none;
   border:0;
   color:white;
-  font-size:20px;
+  font-size:23px;
 }
-@media(max-width:850px){
-  .game-grid,.quick-grid{grid-template-columns:repeat(2,1fr)}
-  .welcome-art{width:170px;height:170px;font-size:70px}
+.switch{
+  text-align:center;
+  margin-top:18px;
+  font-size:13px;
+  color:var(--muted);
 }
-@media(max-width:600px){
-  header{padding:0 4%;height:65px}
-  .logo{font-size:16px}
-  nav{gap:11px}
-  nav a{font-size:10px}
-  header .btn{padding:10px;font-size:11px}
-  .welcome{padding:35px 5%}
-  .welcome-art{display:none}
-  .content{padding:27px 5%}
-  .game-grid,.quick-grid{gap:10px}
-  .game{padding:14px;min-height:180px}
-  .squad-layout{grid-template-columns:1fr}
-  .community-banner{align-items:flex-start;flex-direction:column}
-  .leaderboard th,.leaderboard td{padding:12px 5px;font-size:10px}
+.switch span{color:#9d9aff;cursor:pointer}
+#message{
+  font-size:13px;
+  color:#ffb6b6;
+  margin-top:12px;
+  line-height:1.5;
+}
+
+@media(max-width:800px){
+  .hero-content{grid-template-columns:1fr}
+  .grid,.feature-grid{grid-template-columns:repeat(2,1fr)}
+  nav{gap:12px;flex-wrap:wrap}
+  nav a{font-size:11px}
+}
+@media(max-width:480px){
+  .grid,.feature-grid{grid-template-columns:1fr 1fr;gap:10px}
+  .card,.feature{padding:14px}
+  .game-icon{height:85px;font-size:38px}
+  .nav{padding:14px 4%}
+  .logo{font-size:17px}
+  nav{gap:9px}
+  .welcome{padding:23px;display:block}
+  .welcome .btn{margin-top:18px}
 }
 </style>
 </head>
@@ -309,234 +287,433 @@ footer{
 <body>
 
 <header>
-  <div class="logo">PRO<span>GAMERS</span> HUB</div>
-  <nav>
-    <a href="#home">Home</a>
-    <a href="#games">Games</a>
-    <a href="#squads">Squads</a>
-    <a href="#community">Community</a>
-  </nav>
-  <button class="btn" onclick="openLogin()">Join Us</button>
+  <div class="nav">
+    <a href="#" class="logo">PRO<span>GAMERS</span> HUB</a>
+    <nav>
+      <a href="#home">Home</a>
+      <a href="#games">Games</a>
+      <a href="#community">Community</a>
+      <a href="#features">Features</a>
+    </nav>
+    <button class="btn" id="loginButton" onclick="openModal()">Login</button>
+    <button class="btn secondary" id="logoutButton" onclick="logout()" style="display:none">Sign out</button>
+  </div>
 </header>
 
 <main>
-
-<section class="welcome" id="home">
-  <div class="welcome-top">
+<div class="hero" id="home">
+  <div class="container hero-content">
     <div>
-      <div class="eyebrow">YOUR GAMING HOME</div>
-      <h1>Welcome to your<br><span>gaming world.</span></h1>
+      <span class="tag">🎮 YOUR GAMING WORLD STARTS HERE</span>
+      <h1>Welcome to your <span class="gradient">gaming world.</span></h1>
       <p>
-        Whether you're here to find your next squad, meet new
-        players or take on a new challenge, there's a place
-        for you at ProGamers Hub.
+        Meet players, build your squad, discover gaming communities
+        and become part of something bigger. Your next gaming
+        adventure starts with ProGamers Hub.
       </p>
-      <div class="welcome-actions">
-        <button class="btn" onclick="openLogin()">Join the community</button>
-        <button class="btn secondary"
-          onclick="document.getElementById('games').scrollIntoView()">
-          Explore games
-        </button>
+      <div class="actions">
+        <button class="btn" onclick="openModal()">Join the community</button>
+        <a href="#games"><button class="btn secondary">Explore games</button></a>
       </div>
     </div>
-    <div class="welcome-art">🎮</div>
-  </div>
-</section>
 
-<section class="content">
+    <div class="hero-art">
+      <div>
+        <div class="controller">🎮</div>
+        <h3>One Hub. Every Player.</h3>
+        <p>Connect. Play. Grow. Together.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<section id="features">
+<div class="container">
   <div class="section-title">
-    <div>
-      <h2>Your gaming space</h2>
-      <p>Everything you need to get connected.</p>
-    </div>
+    <h2>Everything gamers need</h2>
+    <p>A place to connect, discover and enjoy gaming.</p>
   </div>
 
-  <div class="quick-grid">
-    <div class="quick-card">
+  <div class="feature-grid">
+    <div class="feature">
       <div class="emoji">👤</div>
-      <h3>Player Profiles</h3>
-      <p>Create your gaming identity and show your player interests.</p>
+      <h3>Player profiles</h3>
+      <p>Create your gaming identity and introduce yourself.</p>
     </div>
-    <div class="quick-card">
+    <div class="feature">
       <div class="emoji">🤝</div>
-      <h3>Find Teammates</h3>
-      <p>Meet players who enjoy the same games as you.</p>
+      <h3>Find teammates</h3>
+      <p>Discover other players and build your squad.</p>
     </div>
-    <div class="quick-card">
+    <div class="feature">
       <div class="emoji">💬</div>
-      <h3>Community Chat</h3>
-      <p>Share ideas and connect with the gaming community.</p>
+      <h3>Community chat</h3>
+      <p>Connect with other gamers and share your interests.</p>
     </div>
-    <div class="quick-card">
+    <div class="feature">
       <div class="emoji">🏆</div>
       <h3>Tournaments</h3>
-      <p>Discover community competitions and events.</p>
+      <p>Discover competitions and gaming events.</p>
     </div>
   </div>
+</div>
 </section>
 
-<section class="content" id="games">
+<section id="games">
+<div class="container">
   <div class="section-title">
-    <div>
-      <h2>Choose your game</h2>
-      <p>Your favourite games, all in one place.</p>
-    </div>
-    <a class="text-link" href="#community">Our community</a>
+    <h2>Explore your favourite games</h2>
+    <p>Choose your gaming world.</p>
   </div>
 
-  <div class="game-grid">
-    <article class="game">
-      <div class="game-emoji">🔥</div>
+  <div class="grid">
+    <div class="card">
+      <div class="game-icon">🔥</div>
       <h3>Free Fire</h3>
-      <p>Find squad members and connect with other survivors.</p>
-      <button class="btn" onclick="chooseGame('Free Fire')">Explore game</button>
-    </article>
+      <p>Meet fellow survivors and find your next squad.</p>
+      <button class="small-btn" onclick="joinGame('Free Fire')">Explore game</button>
+    </div>
 
-    <article class="game">
-      <div class="game-emoji">🎯</div>
+    <div class="card">
+      <div class="game-icon">🎯</div>
       <h3>Call of Duty Mobile</h3>
-      <p>Meet mobile shooter fans and discover teammates.</p>
-      <button class="btn" onclick="chooseGame('Call of Duty Mobile')">Explore game</button>
-    </article>
+      <p>Connect with COD Mobile players.</p>
+      <button class="small-btn" onclick="joinGame('Call of Duty Mobile')">Explore game</button>
+    </div>
 
-    <article class="game">
-      <div class="game-emoji">🪖</div>
-      <h3>PUBG</h3>
-      <p>Connect with players and build your next squad.</p>
-      <button class="btn" onclick="chooseGame('PUBG')">Explore game</button>
-    </article>
+    <div class="card">
+      <div class="game-icon">🪖</div>
+      <h3>PUBG Mobile</h3>
+      <p>Find teammates and gaming friends.</p>
+      <button class="small-btn" onclick="joinGame('PUBG Mobile')">Explore game</button>
+    </div>
 
-    <article class="game">
-      <div class="game-emoji">⚡</div>
+    <div class="card">
+      <div class="game-icon">⚡</div>
       <h3>Fortnite</h3>
-      <p>Discover a community of creative competitors.</p>
-      <button class="btn" onclick="chooseGame('Fortnite')">Explore game</button>
-    </article>
+      <p>Discover your Fortnite community.</p>
+      <button class="small-btn" onclick="joinGame('Fortnite')">Explore game</button>
+    </div>
   </div>
+</div>
 </section>
 
-<section class="content" id="squads">
+<section id="community">
+<div class="container">
+  <div class="welcome">
+    <div>
+      <h2>There's a place for every gamer.</h2>
+      <p>Whether you're a beginner or an experienced player,<br>
+      you're welcome here. Let's build the gaming community together.</p>
+    </div>
+    <button class="btn" onclick="openModal()">Join ProGamers</button>
+  </div>
+
+  <div class="profile-panel" id="profilePanel">
+    <h3>👤 Your player profile</h3>
+    <p id="profileName"></p>
+    <p id="profileEmail"></p>
+    <p id="profileGame"></p>
+    <button class="small-btn" onclick="editProfile()">Edit username</button>
+  </div>
+</div>
+</section>
+
+<section>
+<div class="container">
   <div class="section-title">
-    <div>
-      <h2>Meet your next squad</h2>
-      <p>Good games are even better together.</p>
-    </div>
+    <h2>Community leaderboard</h2>
+    <p>Example leaderboard preview. Real player rankings will be added later.</p>
   </div>
-
-  <div class="squad-layout">
-    <div class="squad-box">
-      <h3>🤝 Find players like you</h3>
-      <p>
-        Looking for teammates? ProGamers Hub is being built
-        to help players discover people who enjoy the same games.
-      </p>
-      <div class="squad-tags">
-        <span class="tag">Casual players</span>
-        <span class="tag">Team players</span>
-        <span class="tag">Competitive players</span>
-        <span class="tag">New gamers welcome</span>
-      </div>
-      <button class="btn" style="margin-top:20px" onclick="openLogin()">
-        Create your profile
-      </button>
-    </div>
-
-    <div class="community-box">
-      <h3>🌟 Everyone belongs here</h3>
-      <p>
-        New to gaming communities? That's okay.
-        Come to learn, share, make friends and enjoy the games.
-      </p>
-      <p>Respect every player. Support your squad. Enjoy the game.</p>
-    </div>
+  <div class="card">
+    <p>🥇 Player One — Sample profile</p><br>
+    <p>🥈 Player Two — Sample profile</p><br>
+    <p>🥉 Player Three — Sample profile</p>
   </div>
-</section>
-
-<section class="content">
-  <div class="section-title">
-    <div>
-      <h2>Community leaderboard</h2>
-      <p>A preview of the rankings area.</p>
-    </div>
-  </div>
-
-  <div class="squad-box">
-    <table class="leaderboard">
-      <thead>
-        <tr><th>RANK</th><th>PLAYER</th><th>GAME</th><th>POINTS</th></tr>
-      </thead>
-      <tbody>
-        <tr><td>01</td><td>ShadowX</td><td>Free Fire</td><td>Sample</td></tr>
-        <tr><td>02</td><td>NovaPro</td><td>COD Mobile</td><td>Sample</td></tr>
-        <tr><td>03</td><td>Ghost99</td><td>PUBG</td><td>Sample</td></tr>
-      </tbody>
-    </table>
-    <div class="sample">Sample players only — live rankings will be connected later.</div>
-  </div>
-</section>
-
-<section class="content" id="community">
-  <div class="community-banner">
-    <div>
-      <h2>Your people. Your games. Your community.</h2>
-      <p>
-        Step into a gaming space made for connection,
-        teamwork and great moments.
-      </p>
-    </div>
-    <button class="btn" onclick="openLogin()">Join ProGamers Hub</button>
-  </div>
+</div>
 </section>
 
 </main>
 
 <footer>
-  <span>© 2026 ProGamers Hub</span>
-  <span>Connect. Compete. Conquer.</span>
-  <span>Built for gamers everywhere.</span>
+  <p>© 2026 ProGamers Hub. Connecting players worldwide.</p>
+  <p style="margin-top:9px">Built for gamers, by gamers. 🎮</p>
 </footer>
 
-<div class="modal" id="loginModal">
+<div class="modal" id="authModal">
   <div class="modal-box">
-    <button class="close" onclick="closeLogin()" aria-label="Close">×</button>
-    <h2>Welcome to the Hub!</h2>
-    <p>Join the community and get ready to meet your next squad.</p>
+    <button class="close" onclick="closeModal()">×</button>
+    <h2 id="modalTitle">Welcome, gamer!</h2>
+    <p id="modalDescription">Create your account and join the community.</p>
 
-    <label for="email">Email address</label>
-    <input id="email" type="email" placeholder="Enter your email">
+    <div id="registerFields">
+      <input id="username" type="text" placeholder="Your gaming username">
+    </div>
 
-    <label for="password">Password</label>
-    <input id="password" type="password" placeholder="Enter your password">
+    <input id="email" type="email" placeholder="Email address">
+    <input id="password" type="password" placeholder="Password">
 
-    <button class="btn" onclick="demoLogin()">Continue with email</button>
-    <button class="btn secondary" onclick="providerMessage('Google')">Continue with Google</button>
-    <button class="btn secondary" onclick="providerMessage('Discord')">Continue with Discord</button>
+    <button class="btn" id="emailButton" onclick="emailLogin()">Create account</button>
+    <button class="btn secondary" onclick="googleLogin()">Continue with Google</button>
 
-    <p style="margin-top:14px">
-      Sign-in is a preview at this stage. Firebase authentication
-      will be connected in the next development stage.
-    </p>
+    <div class="switch">
+      <span id="switchText">Already have an account? </span>
+      <span onclick="switchMode()" id="switchButton">Login</span>
+    </div>
+    <div id="message"></div>
   </div>
 </div>
 
-<script>
-function openLogin(){
-  document.getElementById('loginModal').style.display='flex';
+<script type="module">
+import { initializeApp }
+from "https://www.gstatic.com/firebasejs/11.0.1/firebase-app.js";
+
+import {
+  getAuth,
+  GoogleAuthProvider,
+  signInWithPopup,
+  createUserWithEmailAndPassword,
+  signInWithEmailAndPassword,
+  updateProfile,
+  signOut,
+  onAuthStateChanged
+} from "https://www.gstatic.com/firebasejs/11.0.1/firebase-auth.js";
+
+import {
+  getFirestore,
+  doc,
+  setDoc,
+  getDoc
+} from "https://www.gstatic.com/firebasejs/11.0.1/firebase-firestore.js";
+
+const firebaseConfig = {
+  apiKey: "AIzaSyCSOsbbM6pQI5tR50quVbzFoILchvJ4z_0",
+  authDomain: "progamers-hub.firebaseapp.com",
+  projectId: "progamers-hub",
+  storageBucket: "progamers-hub.firebasestorage.app",
+  messagingSenderId: "426289225632",
+  appId: "1:426289225632:web:16b1a00f3dcf46b819cec5",
+  measurementId: "G-CD8CT5GSNX"
+};
+
+const app = initializeApp(firebaseConfig);
+const auth = getAuth(app);
+const db = getFirestore(app);
+const provider = new GoogleAuthProvider();
+
+let isLogin = false;
+let selectedGame = "Not selected";
+
+window.openModal = () => {
+  document.getElementById("authModal").style.display = "flex";
+};
+
+window.closeModal = () => {
+  document.getElementById("authModal").style.display = "none";
+  document.getElementById("message").textContent = "";
+};
+
+function showMessage(message) {
+  document.getElementById("message").textContent = message;
 }
-function closeLogin(){
-  document.getElementById('loginModal').style.display='none';
+
+window.switchMode = () => {
+  isLogin = !isLogin;
+
+  document.getElementById("modalTitle").textContent =
+    isLogin ? "Welcome back!" : "Welcome, gamer!";
+
+  document.getElementById("modalDescription").textContent =
+    isLogin ? "Login to your gaming account." :
+    "Create your account and join the community.";
+
+  document.getElementById("registerFields").style.display =
+    isLogin ? "none" : "block";
+
+  document.getElementById("emailButton").textContent =
+    isLogin ? "Login" : "Create account";
+
+  document.getElementById("switchText").textContent =
+    isLogin ? "New to ProGamers Hub? " : "Already have an account? ";
+
+  document.getElementById("switchButton").textContent =
+    isLogin ? "Create account" : "Login";
+
+  showMessage("");
+};
+
+async function savePlayer(user, username) {
+  const playerRef = doc(db, "users", user.uid);
+  const existing = await getDoc(playerRef);
+
+  const data = {
+    uid: user.uid,
+    email: user.email || "",
+    username: username || user.displayName || "Gamer",
+    updatedAt: new Date().toISOString()
+  };
+
+  if (!existing.exists()) {
+    data.createdAt = new Date().toISOString();
+    data.game = "Not selected";
+  }
+
+  await setDoc(playerRef, data, { merge: true });
 }
-function chooseGame(game){
-  alert(game + ' will have its own community after the database is connected.');
-}
-function providerMessage(provider){
-  alert(provider + ' sign-in will be activated during Firebase setup.');
-}
-function demoLogin(){
-  alert('Account creation is not active yet. We will connect Firebase next.');
-}
+
+window.emailLogin = async () => {
+  const email = document.getElementById("email").value.trim();
+  const password = document.getElementById("password").value;
+  const username = document.getElementById("username").value.trim();
+
+  if (!email || !password) {
+    showMessage("Please enter your email and password.");
+    return;
+  }
+
+  if (!isLogin && !username) {
+    showMessage("Please choose a gaming username.");
+    return;
+  }
+
+  if (!isLogin && username.length < 3) {
+    showMessage("Your username must have at least 3 characters.");
+    return;
+  }
+
+  try {
+    showMessage("Please wait...");
+
+    if (isLogin) {
+      const result = await signInWithEmailAndPassword(
+        auth, email, password
+      );
+      await savePlayer(result.user);
+    } else {
+      const result = await createUserWithEmailAndPassword(
+        auth, email, password
+      );
+
+      await updateProfile(result.user, {
+        displayName: username
+      });
+
+      await savePlayer(result.user, username);
+    }
+
+    closeModal();
+  } catch (error) {
+    showMessage(error.message);
+  }
+};
+
+window.googleLogin = async () => {
+  try {
+    showMessage("Connecting to Google...");
+    const result = await signInWithPopup(auth, provider);
+    await savePlayer(result.user);
+    closeModal();
+  } catch (error) {
+    showMessage(error.message);
+  }
+};
+
+window.logout = async () => {
+  try {
+    await signOut(auth);
+  } catch (error) {
+    alert(error.message);
+  }
+};
+
+onAuthStateChanged(auth, async (user) => {
+  const loginButton = document.getElementById("loginButton");
+  const logoutButton = document.getElementById("logoutButton");
+  const panel = document.getElementById("profilePanel");
+
+  if (user) {
+    loginButton.style.display = "none";
+    logoutButton.style.display = "inline-block";
+    panel.style.display = "block";
+
+    try {
+      const playerRef = doc(db, "users", user.uid);
+      const playerSnap = await getDoc(playerRef);
+
+      const player = playerSnap.exists() ? playerSnap.data() : {};
+
+      document.getElementById("profileName").textContent =
+        "Username: " + (player.username || user.displayName || "Gamer");
+
+      document.getElementById("profileEmail").textContent =
+        "Email: " + (user.email || "Not available");
+
+      document.getElementById("profileGame").textContent =
+        "Favourite game: " + (player.game || "Not selected");
+    } catch (error) {
+      showMessage("Could not load your profile: " + error.message);
+    }
+  } else {
+    loginButton.style.display = "inline-block";
+    logoutButton.style.display = "none";
+    panel.style.display = "none";
+  }
+});
+
+window.joinGame = async (game) => {
+  selectedGame = game;
+
+  if (!auth.currentUser) {
+    alert("Please log in first to choose your favourite game.");
+    openModal();
+    return;
+  }
+
+  try {
+    await setDoc(doc(db, "users", auth.currentUser.uid), {
+      game: game,
+      updatedAt: new Date().toISOString()
+    }, { merge: true });
+
+    document.getElementById("profileGame").textContent =
+      "Favourite game: " + game;
+
+    alert(game + " saved to your player profile!");
+  } catch (error) {
+    alert("Could not save game: " + error.message);
+  }
+};
+
+window.editProfile = async () => {
+  if (!auth.currentUser) return;
+
+  const currentName = auth.currentUser.displayName || "Gamer";
+  const newName = prompt("Enter your new gaming username:", currentName);
+
+  if (!newName || newName.trim().length < 3) {
+    alert("Username must have at least 3 characters.");
+    return;
+  }
+
+  try {
+    await updateProfile(auth.currentUser, {
+      displayName: newName.trim()
+    });
+
+    await setDoc(doc(db, "users", auth.currentUser.uid), {
+      username: newName.trim(),
+      updatedAt: new Date().toISOString()
+    }, { merge: true });
+
+    document.getElementById("profileName").textContent =
+      "Username: " + newName.trim();
+
+    alert("Username updated!");
+  } catch (error) {
+    alert(error.message);
+  }
+};
 </script>
 
 </body>
-  </html>
-  
+</html>
